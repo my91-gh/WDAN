@@ -1,0 +1,951 @@
+exp_id=final
+seq_len=720
+fix_seed=2024
+itr=3
+machine=local
+server_name=Local
+precision=full
+gpu_id=1
+
+# region ETTh1
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.0001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 192 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 336 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 5 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 720 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.0001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+# endregion
+
+# region ETTh2
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 5 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 192 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 0 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 336 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTh2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 720 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+# endregion
+
+# region Exchange
+python run.py \
+  --model WDAN_PatchTST \
+  --data Exchange \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 8 \
+  --dec_in 8 \
+  --c_out 8 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 1 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data Exchange \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 192 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 8 \
+  --dec_in 8 \
+  --c_out 8 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 5 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 1 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data Exchange \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 336 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 8 \
+  --dec_in 8 \
+  --c_out 8 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 1 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data Exchange \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 720 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 8 \
+  --dec_in 8 \
+  --c_out 8 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 5 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+# endregion
+
+# region ETTm1
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 5 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 1 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 192 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 5 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 336 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm1 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 720 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+# endregion
+
+# region ETTm2
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 16 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 0 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 192 \
+  --num_workers 8 \
+  --batch_size 128 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 2 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 12 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 1 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 336 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 1 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ETTm2 \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 720 \
+  --num_workers 8 \
+  --batch_size 128 \
+  --use_norm 0 \
+  --e_layers 3 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 128 \
+  --stats_d_ff 128 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001
+# endregion
+
+# region Weather
+python run.py \
+  --model WDAN_PatchTST \
+  --data Weather \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 32 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 21 \
+  --dec_in 21 \
+  --c_out 21 \
+  --n_heads 4 \
+  --stats_dwt_levels 2 \
+  --stats_window_len 24 \
+  --stats_d_model 512 \
+  --stats_d_ff 512 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 2 \
+  --base_stats_lr 0.001 \
+  --stats_strategy stats_bb_union \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --base_lr 0.0001 \
+  --epochs 3
+
+python run.py \
+    --model WDAN_PatchTST \
+    --data Weather \
+    --fix_seed $fix_seed \
+    --itr $itr \
+    --machine $machine \
+    --server_name $server_name \
+    --exp_id $exp_id \
+    --seq_len $seq_len \
+    --label_len $((seq_len / 2)) \
+    --pred_len 192 \
+    --num_workers 8 \
+    --batch_size 32 \
+    --use_norm 0 \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --n_heads 16 \
+    --stats_dwt_levels 3 \
+    --stats_window_len 5 \
+    --stats_d_model 512 \
+    --stats_d_ff 512 \
+    --stats_ffn_layers 2 \
+    --twice_epoch 1 \
+    --base_stats_lr 0.0001 \
+    --stats_strategy stats_bb_union \
+    --loss_type mse \
+    --gpu_id $gpu_id \
+    --base_lr 0.0001 \
+    --epochs 3
+
+python run.py \
+    --model WDAN_PatchTST \
+    --data Weather \
+    --fix_seed $fix_seed \
+    --itr $itr \
+    --machine $machine \
+    --server_name $server_name \
+    --exp_id $exp_id \
+    --seq_len $seq_len \
+    --label_len $((seq_len / 2)) \
+    --pred_len 336 \
+    --num_workers 8 \
+    --batch_size 128 \
+    --use_norm 0 \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --n_heads 4 \
+    --stats_dwt_levels 3 \
+    --stats_window_len 12 \
+    --stats_d_model 512 \
+    --stats_d_ff 512 \
+    --stats_ffn_layers 2 \
+    --twice_epoch 1 \
+    --base_stats_lr 0.001 \
+    --stats_strategy stats_bb_union \
+    --loss_type mse \
+    --gpu_id $gpu_id \
+    --base_lr 0.0001 \
+    --epochs 3
+
+python run.py \
+    --model WDAN_PatchTST \
+    --data Weather \
+    --fix_seed $fix_seed \
+    --itr $itr \
+    --machine $machine \
+    --server_name $server_name \
+    --exp_id $exp_id \
+    --seq_len $seq_len \
+    --label_len $((seq_len / 2)) \
+    --pred_len 720 \
+    --num_workers 8 \
+    --batch_size 128 \
+    --use_norm 0 \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --n_heads 4 \
+    --stats_dwt_levels 3 \
+    --stats_window_len 24 \
+    --stats_d_model 512 \
+    --stats_d_ff 512 \
+    --stats_ffn_layers 2 \
+    --twice_epoch 1 \
+    --base_stats_lr 0.0001 \
+    --stats_strategy stats_bb_union \
+    --loss_type mse \
+    --gpu_id $gpu_id \
+    --base_lr 0.0001 \
+    --epochs 3
+# endregion
+
+# region ECL
+python run.py \
+  --model WDAN_PatchTST \
+  --data ECL \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 96 \
+  --num_workers 8 \
+  --batch_size 16 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 321 \
+  --dec_in 321 \
+  --c_out 321 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 12 \
+  --stats_d_model 512 \
+  --stats_d_ff 512 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 1 \
+  --stats_strategy stats_bb_union \
+  --base_stats_lr 0.001 \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --precision $precision \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ECL \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 192 \
+  --num_workers 8 \
+  --batch_size 16 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 321 \
+  --dec_in 321 \
+  --c_out 321 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 24 \
+  --stats_d_model 512 \
+  --stats_d_ff 512 \
+  --stats_ffn_layers 1 \
+  --twice_epoch 1 \
+  --stats_strategy stats_bb_union \
+  --base_stats_lr 0.001 \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --precision $precision \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ECL \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 336 \
+  --num_workers 8 \
+  --batch_size 16 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 321 \
+  --dec_in 321 \
+  --c_out 321 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 12 \
+  --stats_d_model 512 \
+  --stats_d_ff 512 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 1 \
+  --stats_strategy stats_bb_union \
+  --base_stats_lr 0.001 \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --precision $precision \
+  --base_lr 0.0001
+
+python run.py \
+  --model WDAN_PatchTST \
+  --data ECL \
+  --fix_seed $fix_seed \
+  --itr $itr \
+  --machine $machine \
+  --server_name $server_name \
+  --exp_id $exp_id \
+  --seq_len $seq_len \
+  --label_len $((seq_len / 2)) \
+  --pred_len 720 \
+  --num_workers 8 \
+  --batch_size 16 \
+  --use_norm 0 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 321 \
+  --dec_in 321 \
+  --c_out 321 \
+  --stats_dwt_levels 3 \
+  --stats_window_len 12 \
+  --stats_d_model 512 \
+  --stats_d_ff 512 \
+  --stats_ffn_layers 2 \
+  --twice_epoch 1 \
+  --stats_strategy stats_bb_union \
+  --base_stats_lr 0.001 \
+  --loss_type mse \
+  --gpu_id $gpu_id \
+  --precision $precision \
+  --base_lr 0.0001
+# endregion
+
+
+
+
+
